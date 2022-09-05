@@ -1,0 +1,30 @@
+@each $class, $attr in $attrs{
+  @each $type, $values in $colors{
+    @each $index, $value in $values{
+      .#{$class}-#{$type}#{$index} {
+        #{$attr}: $value !important;
+      }
+    }
+  }
+}
+
+@each $class, $attr in $attrs{
+  @each $type, $modes in $colorModes{
+    .#{$class}-#{$type} {
+      #{$attr}: $modes !important;
+    }
+  }
+}
+
+page {
+  color: map-get($colorModes, deep);
+  background-color: map-get($colorModes, white);
+}
+
+.color-error {
+  color: red !important;
+}
+
+.bg-none {
+  background: none !important;
+}

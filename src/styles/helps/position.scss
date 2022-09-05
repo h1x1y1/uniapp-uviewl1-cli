@@ -1,0 +1,52 @@
+/* Position Helpers */
+$class: '';
+@each $type, $key in map-get($distances, "direction") {
+  @each $value in map-get($distances, "location") {
+    @if $value == 0 {
+      $class: $class + ' .' + $key + ',';
+      .#{$key} {
+        #{$key}: #{$value}px;
+      }
+    } @else {
+      $class: $class + ' .' + $key + $value + ',';
+      .#{$key}#{$value} {
+        #{$key}: #{$value}px;
+      }
+    }
+  }
+}
+
+.axis-center{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.axis-x-center{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.axis-y-center{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom-safe {
+  bottom: 0;
+  bottom: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+  bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+}
+
+page, .relative {
+  position: relative !important;
+}
+
+#{$class}, .absolute, .axis-center, .axis-x-center, .axis-y-center, .bottom-safe {
+  position: absolute !important;
+}
+
+.fixed {
+  z-index: 10;
+  position: fixed !important;
+}

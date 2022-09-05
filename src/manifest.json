@@ -1,66 +1,76 @@
 {
-	"name": "",
-	"appid": "",
-	"description": "",
-	"versionName": "1.0.0",
-	"versionCode": "100",
-	"transformPx": false,
-	"app-plus": { /* 5+App特有相关 */
-		"usingComponents": true,
-		"splashscreen": {
-			"alwaysShowBeforeRender": true,
-			"waiting": true,
-			"autoclose": true,
-			"delay": 0
-		},
-		"modules": { /* 模块配置 */
-
-		},
-		"distribute": { /* 应用发布信息 */
-			"android": { /* android打包配置 */
-				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-					"<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
-					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
-					"<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
-					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
-					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
-					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
-					"<uses-feature android:name=\"android.hardware.camera\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
-					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-				]
-			},
-			"ios": { /* ios打包配置 */
-
-			},
-			"sdkConfigs": { /* SDK配置 */
-
-			}
-		}
-	},
-	"quickapp": { /* 快应用特有相关 */
-
-	},
-	"mp-weixin": { /* 微信小程序特有相关 */
-		"appid": "",
-		"setting": {
-			"urlCheck": false
-		},
-		"usingComponents": true
-	},
-	"mp-alipay" : {
+    "name" : "春兴设备管理",
+    "appid" : "__UNI__D981131",
+    "description" : "使用操作修改设备信息",
+    "versionName" : "0.9.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "safearea" : {
+            "bottom" : {
+                "offset" : "none"
+            }
+        },
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {},
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ]
+            },
+            /* ios打包配置 */
+            "ios" : {},
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {}
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wxe589780caf98b3ca",
+        "setting" : {
+            "urlCheck" : true,
+            "es6" : false,
+            "minified" : true
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
         "usingComponents" : true
     },
     "mp-baidu" : {
@@ -69,7 +79,83 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
-    "mp-qq" : {
-        "usingComponents" : true
+    // "h5": {
+    //      "devServer": {
+    //          "proxy": {//配置代理服务器来解决跨域问题，uniapp不适用CORS方案和设置JSONP方案
+    //              "/wxwx/": {//映射域名
+    //                  "target": "https://qyapi.weixin.qq.com",
+    //                  "pathRewrite": {
+    //                      "^/wxwx": ""
+    //                  }
+    //              }
+    //          }
+    //      }
+    //  }
+    "h5" : {
+        "devServer" : {
+            "disableHostCheck" : true,
+            "proxy" : {
+                //配置代理服务器来解决跨域问题，uniapp不适用CORS方案和设置JSONP方案
+                "/sso/" : {
+                    //映射域名
+                    "target" : "http://192.168.20.26:8080/sso", //目标接口域名	
+
+                    // "target" : "http://10.1.2.59:9205", //目标接口域名	
+                    "changeOrigin" : true, //是否跨域
+                    "secure" : false, // 设置支持https协议的代理
+                    "pathRewrite" : {
+                        "^/sso" : ""
+                    } //api路径重定向，根据具体情况调整，也可不写
+                },
+                "/eqms" : {
+                    //映射域名
+                    // "target" : "http://192.168.20.25:3001/mock/15", //mock接口域名
+                    "target" : "http://192.168.20.131:8889", //生产环境目标接口域名	 
+
+                    // "target" : "http://luo.com:8001/", //目标接口域名	 
+                    "changeOrigin" : true, //是否跨域
+                    "secure" : false, // 设置支持https协议的代理
+                    "pathRewrite" : {
+                        "^/eqms" : ""
+                    } //api路径重定向，根据具体情况调整，也可不写
+                },
+                "/img" : {
+                    //映射域名  图片上传
+                    "target" : "http://kpi.chunxing-group.com:8081", //http://192.168.2.21:7001", //生产环境目标接口域名	   
+                    "changeOrigin" : true, //是否跨域
+                    "secure" : false, // 设置支持https协议的代理
+                    "pathRewrite" : {
+                        "^/img" : ""
+                    } //api路径重定向，根据具体情况调整，也可不写
+                }
+            },
+            "port" : 8099,
+            "https" : false
+        },
+        // "pathRewrite": {  //api路径重定向，根据具体情况调整，也可不写
+        //     "^/sso": "/"
+        // }
+        // "template" : "template.h5.html",
+        // "router" : {
+        //     "mode" : "history"
+        // }
+        "router" : {
+            "mode" : "hash" // 发布生产机需要 改为hash 链接中自动添加# ，开发机改为history 链接中不带#号
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : false
+            }
+        },
+        "uniStatistics" : {
+            "enable" : true
+        }
     }
 }
+// "title" : "物业公告",
+// "router" : {
+//     "mode" : "hash",
+//     "base" : "/eqms/" //此处填写当前sub-path 对应的路径  此处可改成 pay or notice or word
+// },
+// "publicPath" : "./" //此处注意一点， 需要设置成 `./` 此处用于生成index.html 引用JS文件位置
+

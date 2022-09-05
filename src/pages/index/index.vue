@@ -1,17 +1,10 @@
 <template>
-	<view>
-		<text class="title">{{title}}</text>
-		<u-row gutter="16">
-			<u-col span="3">
-				<view class="demo-layout bg-purple"></view>
-			</u-col>
-			<u-col span="4">
-				<view class="demo-layout bg-purple-light"></view>
-			</u-col>
-			<u-col span="5">
-				<view class="demo-layout bg-purple-dark"></view>
-			</u-col>
-		</u-row>
+	<view class="content">
+		<view class="text-area">
+			<text class="title">
+				uView - 多平台快速开发的UI框架
+			</text>
+		</view>
 	</view>
 </template>
 
@@ -23,7 +16,7 @@
 			}
 		},
 		onLoad() {
-		  console.log(this.$u.config.v);
+
 		},
 		methods: {
 
@@ -31,51 +24,39 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	.content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding: 40rpx;
 	}
 
 	.logo {
 		height: 200rpx;
 		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
+		margin-top: 100rpx;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
 	}
 
 	.text-area {
 		display: flex;
 		justify-content: center;
 	}
-
+	
 	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+		font-size: 28rpx;
+		color: $u-content-color;
 	}
-	.wrap {
-		padding: 24rpx;
+	
+	.button-demo {
+		margin-top: 80rpx;
 	}
-
-	.u-row {
-		margin: 40rpx 0;
-	}
-
-	.demo-layout {
-		height: 80rpx;
-		border-radius: 8rpx;
-	}
-
-	.bg-purple {
-		background: #d3dce6;
-	}
-
-	.bg-purple-light {
-		background: #e5e9f2;
-	}
-
-	.bg-purple-dark {
-		background: #99a9bf;
+	
+	.link-demo {
+		margin-top: 80rpx;
 	}
 </style>

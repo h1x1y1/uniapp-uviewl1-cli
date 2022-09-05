@@ -1,0 +1,23 @@
+/* Margin Helpers */
+@each $value in map-get($distances, "all") {
+  .m#{$value} {
+    margin: #{$value}px !important;
+  }
+}
+
+@each $type, $key in map-get($distances, "direction") {
+  @each $value in map-get($distances, "mAlone") {
+    .m#{$type}#{$value} {
+      margin-#{$key}: #{$value}px !important;
+    }
+  }
+}
+
+.mt88 {
+  margin-top: 88px !important;
+}
+
+.mauto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

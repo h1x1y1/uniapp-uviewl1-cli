@@ -1,0 +1,18 @@
+$typeStr: null;
+$colorStr: null;
+
+@each $type, $values in $colors{
+  $typeStr: #{$type}-#{$typeStr};
+  @each $index, $value in $values{
+    $colorStr: #{$colorStr}color-#{$type}#{$index} #{$value}_;
+  }
+}
+
+@each $type, $values in $colorModes{
+  $colorStr: #{$colorStr}color-#{$type} #{$values}_;
+}
+
+:export {
+  typeStr: $typeStr;
+  colorStr: $colorStr;
+}

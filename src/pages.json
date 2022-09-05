@@ -1,20 +1,1133 @@
-{	
-	"easycom": {
-		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
-	},
-	"pages": [ 
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "xiaoHu",
-				"navigationStyle": "custom"
+{ "pages": [
+	{
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarTitleText": "春兴集团设备管理系统",
+			"enablePullDownRefresh": false,
+			"navigationStyle":"custom",
+			"app-plus":{
+				"titleView":false
 			}
 		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+	},
+		{
+			"path": "pages/login/loginWX",
+			"style": {
+				"navigationBarTitleText": "春兴集团设备管理系统",
+				"enablePullDownRefresh": false,
+				"navigationStyle":"custom",
+					"app-plus":{
+						"titleView":false
+					}
+			}
+		}, {
+			"path": "pages/tabBar/index",
+			"style": {
+				"navigationBarTitleText": "首页", // 导航栏标题文字内容
+				"enablePullDownRefresh": true // 是否开启下拉刷新
+			}
+		}, {
+			"path": "pages/tabBar/inventory",
+			"style": {
+				"navigationBarTitleText": "资产盘点",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/tabBar/reportForms",
+			"style": {
+				"navigationBarTitleText": "设备报表",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/tabBar/my",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/login/resetPwd",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/login/serve",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/home/home",
+			"style": {
+			    "navigationBarTitleText": "欢迎来到设备管理中心",
+			    "enablePullDownRefresh": false,
+			    "h5": {
+			        "titleNView": {
+			            "searchInput": {
+			                "align": "left",
+			                "backgroundColor": "#fff",
+			                "borderRadius": "3px",
+			                "placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+			            },
+			            "buttons": [{
+			                    "text": "查询",
+			                    "fontSize": "16px",
+			                    "float": "left",
+			                    "width": "50px"
+			                },
+			                {
+			                    "text": "   \ue62a",
+			                    "fontSrc": "/static/uniicons.ttf",
+			                    "fontSize": "24px",
+			                    "width": "50px",
+			                    "float": "right",
+			                    "color": "#ffffff"
+			                }
+			            ]
+			        }
+			    }
+			}
+
+		}, {
+			"path": "pages/task/task",
+			"style": {
+				"navigationBarTitleText": "任务",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#fff",
+							"borderRadius": "3px",
+							"placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+						},
+						"buttons": [{
+								"text": "任务",
+								"fontSize": "16px",
+								"float": "left"
+							},
+							{
+								"type": "share",
+								"float": "right"
+							}
+						]
+					}
+				}
+			}
+
+        },
+		{
+		    "path": "pages/repairOrder/index",
+		    "style": {
+		        "navigationBarTitleText": "维修任务",
+		        "enablePullDownRefresh": false,
+		        "h5": {
+		            "titleNView": {
+		                "searchInput": {
+		                    "align": "left",
+		                    "backgroundColor": "#fff",
+		                    "borderRadius": "3px",
+		                    "placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+		                },
+		                "buttons": [
+							{
+							    "text": "返回",
+							    "fontSize": "16px",
+							    "float": "left",
+							    "width": "50px"
+							},
+							{
+		                        "text": "  \ue62a",
+		                        "fontSrc": "/static/uniicons.ttf",
+		                        "fontSize": "30px",
+		                        "width": "50px",
+								"height": "100px",
+		                        "float": "right",
+		                        "color": "#ffffff"
+		                    },
+		                    {
+		                        "text": "   搜索",
+		                        "fontSize": "16px",
+		                        "float": "right",
+		                        "width": "50px"
+		                    }
+		                ]
+		            }
+		        }
+		    }
+		},
+		{
+			"path": "pages/repairOrder/detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+								"text": "任务（指示灯运行前观察）",
+								"fontSize": "14px",
+								"float": "left",
+								"width":"50px"
+							},
+							{
+								"text": "   \ue62a",
+								"fontSrc": "/static/uniicons.ttf",
+								"fontSize": "24px",
+								"width":"50px",
+								"float": "right",
+								"color": "#ffffff"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/repairOrder/addMaterial",
+			"style": {
+				"navigationBarTitleText": "添加物料需求",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#fff",
+							"borderRadius": "3px",
+							"placeholder": "输入物料编码/描述搜索",
+							"autoFocus": true
+						},
+						"buttons": [{
+								"text": "返回",
+								"fontSize": "30rpx",
+								"float": "left",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/repairOrder/addPersions",
+			"style": {
+				"navigationBarTitleText": "添加人员",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#fff",
+							"borderRadius": "3px",
+							"placeholder": "请输入人员名称",
+							"autoFocus": true
+						},
+						"buttons": [{
+								"text": "添加人员",
+								"fontSize": "30rpx",
+								"float": "left",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/upkeep/addPersions",
+			"style": {
+				"navigationBarTitleText": "添加人员",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#fff",
+							"borderRadius": "3px",
+							"placeholder": "请输入人员名称",
+							"autoFocus": true
+						},
+						"buttons": [{
+								"text": "添加人员",
+								"fontSize": "30rpx",
+								"float": "left",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/repairOrder/return_material",
+			"style": {
+				"navigationBarTitleText": "退料",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+							"text": "退料",
+							"fontSize": "35rpx",
+							"float": "left",
+							"width":"50px"
+						},{
+							"text": "关闭",
+							"fontSize": "35rpx",
+							"float": "right",
+							"width":"35px"
+						}]
+					}
+				}
+			}
+		},{
+            "path": "pages/acceptanceOrder/index",
+            "style": {
+                "navigationBarTitleText": "验收单",
+                "enablePullDownRefresh": false,
+                "h5": {
+                    "titleNView": {
+                        "searchInput": {
+                            "align": "left",
+                            "backgroundColor": "#fff",
+                            "borderRadius": "3px",
+                            "placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+                        },
+                        "buttons": [
+            				{
+            				    "text": "返回",
+            				    "fontSize": "16px",
+            				    "float": "left",
+            				    "width": "50px"
+            				},
+            				{
+                                "text": "  \ue62a",
+                                "fontSrc": "/static/uniicons.ttf",
+                                "fontSize": "30px",
+                                "width": "50px",
+            					"height": "100px",
+                                "float": "right",
+                                "color": "#ffffff"
+                            },
+                            {
+                                "text": "   搜索",
+                                "fontSize": "16px",
+                                "float": "right",
+                                "width": "50px"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+		{
+			"path": "pages/acceptanceOrder/material_manage",
+			"style": {
+				"navigationBarTitleText": "物料管理",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": { 
+						"buttons": [{
+								"text": "物料管理",
+								"fontSize": "40rpx",
+								"float": "left",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+		    "path": "pages/acceptanceOrder/detail",
+		    "style": {
+		    	"navigationBarTitleText": "详情",
+		    	"enablePullDownRefresh": false,
+		    	"navigationStyle": "custom",
+		    	"h5": {
+		    		"titleNView": {
+		    			"buttons": [{
+		    					"text": "任务（指示灯运行前观察）",
+		    					"fontSize": "14px",
+		    					"float": "left",
+		    					"width":"50px"
+		    				},
+		    				{
+		    					"text": "   \ue62a",
+		    					"fontSrc": "/static/uniicons.ttf",
+		    					"fontSize": "24px",
+		    					"width":"50px",
+		    					"float": "right",
+		    					"color": "#ffffff"
+		    				}
+		    			]
+		    		}
+		    	}
+		    }
+		},
+		{
+			"path": "pages/repairOrder/material_manage",
+			"style": {
+				"navigationBarTitleText": "物料管理",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						// "searchInput": {
+						// 	"align": "left",
+						// 	"backgroundColor": "#fff",
+						// 	"borderRadius": "3px",
+						// 	"placeholder": "请输入人员名称"
+						// },
+						"buttons": [{
+								"text": "物料管理",
+								"fontSize": "40rpx",
+								"float": "left",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+		},
+        {
+            "path": "pages/upkeep/task",
+            "style": {
+                "navigationBarTitleText": "保养任务",
+                "enablePullDownRefresh": true,
+                "h5": {
+                    "titleNView": {
+                        "searchInput": {
+                            "align": "left",
+                            "backgroundColor": "#fff",
+                            "borderRadius": "3px",
+                            "placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+                        },
+                        "buttons": [{
+                                "text": "返回",
+                                "fontSize": "16px",
+                                "float": "left",
+                                "width": "50px"
+                            },
+                            {
+                                "text": "   \ue62a",
+                                "fontSrc": "/static/uniicons.ttf",
+                                "fontSize": "24px",
+                                "width": "50px",
+                                "float": "right",
+                                "color": "#ffffff"
+                            }
+                        ]
+                    }
+                }
+            }
+
+		},
+		{
+			"path": "pages/upkeep/searchPersion",
+			"style": {
+				"navigationBarTitleText": "选择人员",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#fff",
+							"borderRadius": "3px",
+							"placeholder": "输入工号/姓名搜索",
+							"autoFocus": true
+						},
+						"buttons": [{
+								"text": "返回",
+								"fontSize": "16px",
+								"float": "left",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/upkeep/material_manage",
+			"style": {
+				"navigationBarTitleText": "物料管理",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						// "searchInput": {
+						// 	"align": "left",
+						// 	"backgroundColor": "#fff",
+						// 	"borderRadius": "3px",
+						// 	"placeholder": "请输入人员名称"
+						// },
+						"buttons": [{
+								"text": "物料管理",
+								"fontSize": "40rpx",
+								"float": "left",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/upkeep/detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+								"text": "返回",
+								"fontSize": "16px",
+								"float": "left",
+								"width":"50px"
+							},
+							{
+								"text": "   \ue62a",
+								"fontSrc": "/static/uniicons.ttf",
+								"fontSize": "24px",
+								"width":"50px",
+								"float": "right",
+								"color": "#ffffff"
+							}
+						]
+					}
+				}
+			}
+
+		},
+		{
+			"path": "pages/new/new",
+			"style": {
+				"navigationBarTitleText": "新建",
+				"enablePullDownRefresh": false
+			}
+
+        }, {
+            "path": "pages/upkeep/addMaterial",
+            "style": {
+                "navigationBarTitleText": "添加物料需求",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+                "h5": {
+                    "titleNView": {
+                        "searchInput": {
+                            "align": "left",
+                            "backgroundColor": "#fff",
+                            "borderRadius": "3px",
+                            "placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+                        },
+                        "buttons": [
+                			{
+                			    "text": "返回",
+                			    "fontSize": "16px",
+                			    "float": "left",
+                			    "width": "50px"
+                			},
+                            {
+                                "text": "   搜索",
+                                "fontSize": "16px",
+                                "float": "right",
+                                "width": "50px"
+                            }
+                        ]
+                    }
+                }
+            }
+
+        },
+        {
+            "path": "pages/upkeep/detail",
+            "style": {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+                "h5": {
+                    "titleNView": {
+                        "buttons": [{
+                                "text": "返回",
+                                "fontSize": "16px",
+                                "float": "left",
+                                "width": "50px"
+                            },
+                            {
+                                "text": "   \ue62a",
+                                "fontSrc": "/static/uniicons.ttf",
+                                "fontSize": "24px",
+                                "width": "50px",
+                                "float": "right",
+                                "color": "#ffffff"
+                            }
+                        ]
+                    }
+                }
+            }
+
+		}, {
+			"path": "pages/task/detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+								"text": "任务",
+								"fontSize": "16px",
+								"float": "left"
+							},
+							{
+								"type": "share",
+								"float": "right"
+							}
+						]
+					}
+				}
+			}
+		},{
+            "path" : "pages/task/start",
+            "style" :
+            {
+				"navigationBarTitleText": "初始",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+							"text": "任务执行",
+							"fontSize": "16px",
+							"float": "left"
+						}]
+					}
+				}
+			}
+		} , {
+            "path": "pages/task/detail",
+            "style": {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+                "h5": {
+                    "titleNView": {
+                        "buttons": [{
+                                "text": "任务",
+                                "fontSize": "16px",
+                                "float": "left"
+                            },
+                            {
+                                "type": "share",
+                                "float": "right"
+                            }
+                        ]
+                    }
+                }
+            }
+
+        },
+		{
+			"path": "pages/question/question_report",
+			"style": {
+				"navigationBarTitleText": "问题提报",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#fff",
+							"borderRadius": "3px",
+							"placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+						},
+						"buttons": [
+							{
+								"text": "搜索",
+								"fontSize": "16rpx",
+								"float": "right"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/question/server_request",
+			"style": {
+				"navigationBarTitleText": "服务申请",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#fff",
+							"borderRadius": "3px",
+							"placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+						},
+						"buttons": [
+							{
+								"text": "搜索",
+								"fontSize": "16rpx",
+								"float": "right"
+							}
+						]
+					}
+				}
+			}
+		},
+		  {
+		            "path": "pages/question/detial",
+		            "style": {
+		                "navigationBarTitleText": "详情",
+		                "enablePullDownRefresh": false,
+						"navigationStyle": "custom",
+		                "h5": {
+		                    "titleNView": {
+		                        "buttons": [{
+		                            "text": "返回",
+		                            "fontSize": "16px",
+		                            "float": "left"
+		                        }]
+		                    }
+		                }
+		            }},
+		{
+			"path": "pages/question/q_detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+								"text": "",
+								"fontSize": "14rpx",
+								"float": "left",
+								"width":"400rpx"
+							},
+							{
+								"text": "   \ue62a",
+								"fontSrc": "/static/uniicons.ttf",
+								"fontSize": "24px",
+								"width":"50px",
+								"float": "right",
+								"color": "#ffffff"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/question/server_order",
+			"style": {
+				"navigationBarTitleText": "服务单",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+								"text": "",
+								"fontSize": "14rpx",
+								"float": "left",
+								"width":"400rpx"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+            "path": "pages/question/quesionNew",
+            "style": {
+                "navigationBarTitleText": "创建问题提报单",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+                "h5": {
+                    "titleNView": {
+                        "buttons": [{
+                            "text": "创建问题提报单",
+                            "fontSize": "16px",
+                            "float": "left"
+                        }]
+                    }
+                }
+            }
+        }, {
+            "path": "pages/question/findEquipment",
+            "style": {
+                "navigationBarTitleText": "查询设备",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+                "h5": {
+                    "titleNView": {
+                        "buttons": [{
+                            "text": "返回",
+                            "fontSize": "16px",
+                            "float": "left"
+                        }]
+                    }
+                }
+            }
+
+        },{
+            "path": "pages/question/index", 
+            "style": {
+                "navigationBarTitleText": "问题提报单",
+                "enablePullDownRefresh": false,
+                "h5": {
+                    "titleNView": {
+                        "searchInput": {
+                            "align": "left",
+                            "backgroundColor": "#fff",
+                            "borderRadius": "3px",
+                            "placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+                        },
+                        "buttons": [
+            				{
+            				    "text": "返回",
+            				    "fontSize": "16px",
+            				    "float": "left",
+            				    "width": "50px"
+            				},
+            				{
+                                "text": "  \ue62a",
+                                "fontSrc": "/static/uniicons.ttf",
+                                "fontSize": "30px",
+                                "width": "50px",
+            					"height": "100px",
+                                "float": "right",
+                                "color": "#ffffff"
+                            },
+                            {
+                                "text": "   搜索",
+                                "fontSize": "16px",
+                                "float": "right",
+                                "width": "50px"
+                            }
+                        ]
+                    }
+                }
+            }
+
+        }, {
+            "path": "pages/serverOrder/serverOrder",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+                "h5": {
+                    "titleNView": {
+                        "buttons": [{
+                            "text": "创建服务单",
+                            "fontSize": "16px",
+                            "float": "left"
+                        }]
+                    }
+                }
+            }
+
+        }, {
+            "path": "pages/maintain/maintainOrder",
+            "style": {
+                "navigationBarTitleText": "创建维修工单",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+                "h5": {
+                    "titleNView": {
+                        "buttons": [{
+                            "text": "返回",
+                            "fontSize": "16px",
+                            "float": "left"
+                        }]
+                    }
+                }
+            }
+
+        }, {
+            "path": "pages/home/spotCheck/spotCheck",
+            "style": {
+                "navigationBarTitleText": "点检任务",
+                "enablePullDownRefresh": false,
+                "h5": {
+                    "titleNView": {
+                        "searchInput": {
+                            "align": "left",
+                            "backgroundColor": "#fff",
+                            "borderRadius": "3px",
+                            "placeholder": "输入编号/关键字搜索",
+							"autoFocus": true
+                        },
+                        "buttons": [
+            				{
+            				    "text": "返回",
+            				    "fontSize": "16px",
+            				    "float": "left",
+            				    "width": "50px"
+            				},
+            				{
+                                "text": "  \ue62a",
+                                "fontSrc": "/static/uniicons.ttf",
+                                "fontSize": "30px",
+                                "width": "50px",
+            					"height": "100px",
+                                "float": "right",
+                                "color": "#ffffff"
+                            },
+                            {
+                                "text": "   搜索",
+                                "fontSize": "16px",
+                                "float": "right",
+                                "width": "50px"
+                            }
+                        ]
+                    }
+                }
+            }
+        }, {
+            "path": "pages/home/spotCheck/detail",
+            "style": {
+                "navigationBarTitleText": "点检详情",
+                "enablePullDownRefresh": false,
+                "navigationStyle": "custom"
+            }
+
+        }, {
+            "path": "pages/home/spotCheck/start",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+                "navigationStyle": "custom"
+            }
+
+        }, {
+            "path": "pages/home/spotCheck/scan",
+            "style": {
+                "navigationBarTitleText": "扫描",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+		},{
+            "path": "pages/home/spotCheck/QYWXScan",
+            "style": {
+                "navigationBarTitleText": "扫描",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+
+		}
+    ],
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"subPackages": [{
+		"root": "pages/index",
+		"name": "index",
+		"pages": [{
+			"path": "select",
+			"style": {
+				"navigationBarTitleText": "项目选择",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "scan",
+			"style": {
+				"navigationBarTitleText": "扫码",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "maintain",
+			"style": {
+				"navigationBarTitleText": "保养",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "inspection",
+			"style": {
+				"navigationBarTitleText": "点检",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "repair",
+			"style": {
+				"navigationBarTitleText": "接单",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "service",
+			"style": {
+				"navigationBarTitleText": "维修",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "serviceInfo",
+			"style": {
+				"navigationBarTitleText": "维修",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "component",
+			"style": {
+				"navigationBarTitleText": "零配件信息",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "RepairFinsh",
+			"style": {
+				"navigationBarTitleText": "维修接收",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "RepairFinshInfo",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}]
+	}, {
+		"root": "pages/inventory",
+		"name": "inventory",
+		"pages": [{
+			"path": "details",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "device",
+			"style": {
+				"navigationBarTitleText": "设备盘点",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "QRIndex",
+			"style": {
+				"navigationBarTitleText": "铭牌检索",
+				"enablePullDownRefresh": false
+			}
+		}]
+	}, {
+		"root": "pages/reportForms",
+		"name": "reportForms",
+		"pages": [{
+			"path": "details",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		}]
+	}, {
+		"root": "pages/my",
+		"name": "my",
+		"pages": [{
+			"path": "about",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "security",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "midfyPsw",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}]
+	}],
+	"preloadRule": {
+		"pages/tabBar/index": {
+			"network": "all",
+			"packages": [
+				"index"
+			]
+		},
+		"pages/tabBar/inventory": {
+			"network": "all",
+			"packages": [
+				"inventory"
+			]
+		},
+		"pages/tabBar/reportForms": {
+			"network": "all",
+			"packages": [
+				"reportForms"
+			]
+		},
+		"pages/tabBar/my": {
+			"network": "all",
+			"packages": [
+				"my"
+			]
+		}
+	},
+
+    "globalStyle": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "uView",
+        "navigationBarBackgroundColor": "#3a74c5",
+        "backgroundColor": "#3a74c5"
+    },
+    "tabBar": {
+        "color": "#515151",
+        "selectedColor": "#1296db",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "midButton": {
+            "width": "60px",
+            "height": "65px",
+            "text": "新建",
+            "iconPath": "/static/tab-bar/icon_nearby_mid.png",
+            "iconWidth": "50px",
+            "backgroundImage": ""
+        },
+        "list": [{
+            "pagePath": "pages/home/home",
+            "iconPath": "static/tab-bar/index.png",
+            "selectedIconPath": "static/tab-bar/index-t.png",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/task/task",
+            "iconPath": "static/tab-bar/check.png",
+            "selectedIconPath": "static/tab-bar/check-t.png",
+            "text": "任务"
+        }, {
+            "pagePath": "pages/new/new",
+            "iconPath": "static/tab-bar/icon_nearby_mid.png",
+            "selectedIconPath": "static/tab-bar/icon_nearby_mid.png",
+            "text": "新建",
+            "visible": false
+        }, {
+            "pagePath": "pages/stock/stock",
+            "iconPath": "static/tab-bar/reportForms.png",
+            "selectedIconPath": "static/tab-bar/reportForms-t.png",
+            "text": "库存"
+        }, {
+            "pagePath": "pages/more/more",
+            "iconPath": "static/tab-bar/my.png",
+            "selectedIconPath": "static/tab-bar/my-t.png",
+            "text": "更多"
+        }]
+    }
+
 }

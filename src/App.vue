@@ -13,7 +13,22 @@
 </script>
 
 <style lang="scss">
-	/*每个页面公共css */
-	/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
 	@import "uview-ui/index.scss";
+	@import 'styles/base.scss';
+	/*每个页面公共css */
+	
+	.container {
+		min-height: 100vh;
+		background: #f5f5f5;
+	}
+	
+	.pages-task-task {
+		.uni-page-head {
+			padding: 7px 9px;
+			.uni-page-head-search {
+				margin: 0 9px;
+			}
+		}
+	}
+	
 </style>

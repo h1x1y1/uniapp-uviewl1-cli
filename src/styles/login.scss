@@ -1,0 +1,50 @@
+/* login */
+
+/* login-logo */
+.li-login-logo {
+	align-items: center;
+	justify-content: center;
+	height: 280upx;
+}
+
+.li-login-logo .img {
+	width: 278upx;
+	height: 87upx;
+}
+
+/* longin-form */
+.li-login-form {
+	margin: 0 $page-row-spacing;
+}
+
+// 重写u-form样式
+.li-login-form .u-form {
+	border-radius: 10upx;
+	padding: 0 $page-row-spacing;
+	background-color: #fff;
+}
+
+// 重写u-form-item样式
+.li-login-form .u-form-item {
+	line-height: 87upx;
+}
+
+// 验证码 按钮样式
+.li-login-form .li-form-code button {
+	width: 198upx;
+	height: 60upx;
+	font-size: $font-sm;
+}
+
+// 登录/注册 按钮样式
+.li-login-form .li-form-btns button {
+	font-size: $font-md;
+	margin: 25upx 0;
+	background-color: #fff;
+	color: $font-color-dark;
+}
+
+.li-login-form .li-form-btns button.blue {
+	background-color: $layout;
+	color: #fff;
+}

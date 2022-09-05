@@ -1,0 +1,18 @@
+/* Padding Helpers */
+@each $value in map-get($distances, "all") {
+  .p#{$value} {
+    padding: #{$value}px !important;
+  }
+}
+
+@each $type, $key in map-get($distances, "direction") {
+  @each $value in map-get($distances, "pAlone") {
+    .p#{$type}#{$value} {
+      padding-#{$key}: #{$value}px !important;
+    }
+  }
+}
+
+.iphoneX_safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}

@@ -1,0 +1,30 @@
+$colors: (
+  main: (
+    1: #f05858, // 主色调1
+    2: #b72b2b // 主色调2
+  ),
+  assist: (
+    1: #FDC53D, // 辅色调1
+    2: #FD7305, // 辅色调2
+    3: #FF6555, // 辅色调3
+    4: #01D157 // 辅色调4
+  )
+);
+
+$colorModes: (
+  black: #000000,
+  deep: #202A3D,
+  middle: #676D7A,
+  shallow: #959BA7,
+	layout: #0096ff,
+	
+  bg: #F3F3F3,
+  divider: #D9D9D9,
+  white: #FFFFFF
+);
+
+$attrs: (
+  color: color,
+  line: border-color,
+  bg: background-color
+);
