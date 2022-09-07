@@ -210,7 +210,7 @@
 					</u-col>
 					<u-col span="0.5">
 						<view class="demo-layout bg-purple" style="width: 200rpx;">
-							<u-button plain ripple type="success" class="btn_l" @click="toChange">
+							<u-button plain ripple type="success" class="btn_l" @click="toSave">
 								<view class="">保存</view>
 							</u-button>
 						</view>
@@ -444,7 +444,7 @@
 
 <script>
 	import {GetWorkUser,SetMachineRepairWorkCX,GetFittingUseOrder,GetFittingUseOrderMain,OnGetImage} from "./api"
-	import {GetOrderReport} from "@/plugin/api.js"
+	import {GetOrderReport, UpdateMachineRepairWorkCX} from "@/plugin/api.js"
 	export default {
 		data() {
 			return {
@@ -738,6 +738,17 @@
 			toChange(){
 				//dosomething
 				
+			},
+			toSave(){
+				UpdateMachineRepairWorkCX(){
+					orderNo:,
+					MachineGuid: , 
+					UpdateUserGuid: , 
+					RepairMark: this.RepairMark,
+					RepairReason: this.RepairReason, 
+					FileURL: ,
+					FileName: 
+				}
 			},
 			// 添加物料
 			toAdd(){ 

@@ -3,8 +3,8 @@ const instance = new Fly()
 
 // xxx
  
-const host = process.env.NODE_ENV === 'production' ? 'http://172.16.10.47:8099/eqms' :
-	'http://172.16.10.47:8099/eqms';
+const host = process.env.NODE_ENV === 'production' ? 'http://localhost:8099/eqms' :
+	'http://localhost:8099/eqms';
 	// 'http://localhost:8099/eqms'; 
 
 instance.interceptors.request.use((req) => {

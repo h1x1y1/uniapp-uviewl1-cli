@@ -3,7 +3,7 @@
 		<u-grid class="cx-grid" :col="3" :border="false">
 			<u-grid-item v-for="(item, index) in gridList" :key="index" :bg-color="item.color" @click="utils.to_url(item.url)">
 				<view>
-					<u-badge count="9" :offset="[25, 95]"></u-badge>
+					<u-badge :count="item.qty" :offset="[25, 95]"></u-badge>
 					<u-image class="icon" width="84" height="84" :src="item.src"></u-image>
 					<u-cell-item :title="item.title" :label="item.lable" :border-bottom="false" :arrow="false"></u-cell-item>
 				</view>
@@ -16,6 +16,9 @@
 </template>
 
 <script>
+	import {
+		GetUserTasks
+	} from '@/plugin/api'
 export default {
 	data() {
 		return {
@@ -44,21 +47,24 @@ export default {
 					lable: '异常问题提报',
 					url: '/pages/question/quesionNew',
 					color: '#FFF3F3',
-					src: '/static/home/home_icon_entrance_report.png'
+					src: '/static/home/home_icon_entrance_report.png',
+					qty: 0
 				},
 				{
 					title: '问题提报单',
 					lable: '问题修改审批',
 					url: '/pages/question/index',
 					color: '#FFFBEE',
-					src: '/static/home/home_icon_entrance_problem.png'
+					src: '/static/home/home_icon_entrance_problem.png',
+					qty: 0
 				},
 				{
 					title: '服务申请',
 					lable: '维修员接单',
 					url: '/pages/question/index?Astatus=3', //查看需要审核的单
 					color: '#F6FBFE',
-					src: '/static/home/home_icon_entrance_Request.png'
+					src: '/static/home/home_icon_entrance_Request.png',
+					qty: 0
 				},
 				// {
 				// 	title: '报修单',
@@ -72,40 +78,46 @@ export default {
 					lable: '执行维修任务',
 					url: '/pages/repairOrder/index',
 					color: '#F9FDFF',
-					src: '/static/home/home_icon_entrance_repair.png'
+					src: '/static/home/home_icon_entrance_repair.png',
+					qty: 0
 				},
 				{
 					title: '验收单',
 					lable: '维修任务验收',
 					url: '/pages/acceptanceOrder/index',
 					color: '#F3FFF9',
-					src: '/static/home/home_icon_entrance_receipt.png'
+					src: '/static/home/home_icon_entrance_receipt.png',
+					qty: 0
 				},
 				{
 					title: '点检',
 					lable: '执行点检任务',
 					url: '/pages/home/spotCheck/spotCheck',
 					color: '#EBFFFA',
-					src: '/static/home/home_icon_entrance_check.png'
+					src: '/static/home/home_icon_entrance_check.png',
+					qty: 0
 				},
 				{
 					title: '保养',
 					lable: '执行保养任务',
 					url: '/pages/upkeep/task',
 					color: '#FFFFF4',
-					src: '/static/home/home_icon_entrance_maintain.png'
+					src: '/static/home/home_icon_entrance_maintain.png',
+					qty: 0
 				},
 				{
 					title: '盘点',
 					lable: '执行盘点任务',
 					url: '/pages/tabBar/inventory',
 					color: '#F3FCFF',
-					src: '/static/home/home_icon_entrance_inventory.png'
+					src: '/static/home/home_icon_entrance_inventory.png',
+					qty: 0
 				}
 			]
 		};
 	},
 	onLoad() {
+		this.getBardges()
 		wx.setNavigationBarTitle({ title: '欢迎您' + uni.getStorageSync('userInfo').UserName + '来到设备管理中心v1.0' });
 	},
 	onNavigationBarButtonTap(e) {
@@ -135,6 +147,28 @@ export default {
 		}
 	},
 	methods: {
+		getBardges(){
+			GetUserTasks({
+				UserGuid: uni.getStorageSync('userInfo').UserGuid
+			}).then((res) => {
+				res.data.data.map((itm) => {
+					switch (itm.Class){
+						case '点检':
+							this.gridList[5].qty = itm.qty
+							break;
+						case '保养':
+							this.gridList[6].qty = itm.qty
+							break;
+						case '验收单':
+							this.gridList[4].qty = itm.qty
+							break;
+						default:
+							break;
+					}
+				})
+				console.log(res.data.data);
+			})
+		},
 		//扫描
 		scan(){
 			 this.QYWX.QYWXonScan().then(res=>{

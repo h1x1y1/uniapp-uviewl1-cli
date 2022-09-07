@@ -29,6 +29,13 @@ export const GetMachineStatus = data => http.post('/MachineUseSer.asmx/GetMachin
 	}
 })
 
+// 查询方法
+export const GetUserTasks = data => http.post('/UserInfoSer.asmx/GetUserTasks', data, {
+	headers: {
+		"content-type": "application/x-www-form-urlencoded",
+	}
+})
+
 // 更改状态方法
 export const SetMachineStatus = data => http.post('/MachineUseSer.asmx/SetMachineStatus', data, {
 	headers: {
@@ -247,6 +254,13 @@ export const SubmitRepairReport = data => http.post('/MachineUseSer.asmx/SubmitR
 })
 //查询单据
 export const GetOrderReport = data => http.post('/MachineUseSer.asmx/GetOrderReport', data, {
+	headers: {
+		"content-type": "application/x-www-form-urlencoded",
+	}
+})
+
+//查询单据
+export const UpdateMachineRepairWorkCX = data => http.post('/MachineUseSer.asmx/UpdateMachineRepairWorkCX', data, {
 	headers: {
 		"content-type": "application/x-www-form-urlencoded",
 	}
